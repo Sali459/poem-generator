@@ -81,13 +81,19 @@ form {
   display: none;
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
 .generating {
   animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
 }
 
 footer {
